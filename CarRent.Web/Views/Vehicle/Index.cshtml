@@ -1,0 +1,34 @@
+﻿@model IEnumerable<CarRent.Web.Models.ViewModels.Vehicle>
+
+@{
+    ViewBag.Title = "Vehicles";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Bookings", "Index", "Booking")
+</p>
+
+<p>
+    @Html.ActionLink("Create New", "new")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.RegistrationNo</td>
+            <td>@item.Type</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RegistrationNo }) |
+                @Html.ActionLink("Details", "Details", new { id = item.RegistrationNo }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.RegistrationNo })
+            </td>
+        </tr>
+    }
+
+</table>

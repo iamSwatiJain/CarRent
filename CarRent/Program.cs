@@ -16,15 +16,15 @@ namespace CarRent.Vehicles
 
             for (int i = 1; i <= 3; i++)
             {
-                reg.AddCar(new SmallCar($"Small {i}"));
+                reg.AddVehicle(new SmallCar($"Small {i}"));
             }
             for (int i = 1; i <= 3; i++)
             {
-                reg.AddCar(new CombiCar($"Combi {i}"));
+                reg.AddVehicle(new CombiCar($"Combi {i}"));
             }
             for (int i = 1; i <= 3; i++)
             {
-                reg.AddCar(new Truck($"Truck {i}"));
+                reg.AddVehicle(new Truck($"Truck {i}"));
             }
             
             var booking1 = reg.NewBooking<CombiCar>(new Customer("Customer 01"));

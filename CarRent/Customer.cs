@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CarRent
 {
     public class Customer
     {
-        public string SocialSecurityNumber
-        {
-            get;
-        }
+        public String SocialSecurityNumber { get; }
+        public String FullName { get; set; }
+        public String Phone { get; set; }
+        public String Address { get; set; }
 
         public Customer(String ssn)
         {
